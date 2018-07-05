@@ -1,14 +1,26 @@
-﻿<h1>@Model.GetName()</h1>
-<ul>
-    <li>Rest = @Model.GetRest()</li>
-    <li>Hunger = @Model.GetHunger()</li>
-    <li>Attention = @Model.GetAttention()</li>
-</ul>
+﻿@if (@Model.IsDead())
+{
+    <h1>@Model.GetName() died!</h1>
+    <p><a href="/critters">Go back to your critter corrall</a></p>
+}
 
-<p>
-    <a href="@Model.GetId()/rest">Rest</a><br>
-    <a href="/feed/@Model.GetId()">Feed</a><br>
-    <a href="/play/@Model.GetId()">Play</a>
-</p>
+else
 
-<p><a href="/critters">Go back to your critter corrall</a></p>
+{
+    <h1>@Model.GetName()</h1>
+    <ul>
+        <li>Rest = @Model.GetRest()</li>
+        <li>Hunger = @Model.GetHunger()</li>
+        <li>Attention = @Model.GetAttention()</li>
+    </ul>
+
+    <p>
+        <a href="@Model.GetId()/rest">Rest</a><br>
+        <a href="@Model.GetId()/feed">Feed</a><br>
+        <a href="@Model.GetId()/play">Play</a>
+    </p>
+
+    <p><a href="/critters">Go back to your critter corrall</a></p>
+}
+
+

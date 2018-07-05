@@ -85,12 +85,10 @@ namespace Tamagotchi.Models
 
         }
 
-        //public static void Die()
-        //{
-        //    foreach (Critter Critter in _critterList)
-        //    {
-        //        if (this._)
-        //    }
-        //}
+        public bool IsDead()
+        {
+            if (_hunger <= 0 || _rest <= 0 || _attention <= 0) return true;
+            else return false;
+        }
     }
 }
