@@ -39,8 +39,35 @@ namespace Tamagotchi.Controllers
         [HttpGet("/critters/{id}")]
         public ActionResult CritterDetail(int id)
         {
-            Critter critter = Critter.Find(id);
-            return View(critter);
+            Critter newCritter = Critter.Find(id);
+            return View(newCritter);
+        }
+
+        [HttpPost("/critters/feed/{id}")]
+        public ActionResult Feed(int id)
+        {
+            Critter newCritter = Critter.Find(id);
+            newCritter.Feed();
+            Critter.PassTime();
+            return RedirectToAction("CritterDetail(id)");
+        }
+
+        [HttpPost("/critters/play/{id}")]
+        public ActionResult Play(int id)
+        {
+            Critter newCritter = Critter.Find(id);
+            newCritter.Play();
+            Critter.PassTime();
+            return RedirectToAction("CritterDetail(id)");
+        }
+
+        [HttpPost("/critters/sleep/{id}")]
+        public ActionResult Sleep(int id)
+        {
+            Critter newCritter = Critter.Find(id);
+            newCritter.Rest();
+            Critter.PassTime();
+            return RedirectToAction("CritterDetail(id)");
         }
     }
 }
