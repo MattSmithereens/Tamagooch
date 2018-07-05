@@ -1,9 +1,14 @@
 ﻿<h1>@Model.GetName()</h1>
-<ul>@foreach (var property in Model)
-    {
-    <li>Rest = @Model.GetRest();</li>
-    <li>Hunger = @Model.GetHunger();</li>
-    <li>Attention = @Model.GetAttention();</li>
-      
-    }
+<ul>
+    <li>Rest = @Model.GetRest()</li>
+    <li>Hunger = @Model.GetHunger()</li>
+    <li>Attention = @Model.GetAttention()</li>
 </ul>
+
+<p>
+    <a href="@Model.GetId()/rest">Rest</a><br>
+    <a href="/feed/@Model.GetId()">Feed</a><br>
+    <a href="/play/@Model.GetId()">Play</a>
+</p>
+
+<p><a href="/critters">Go back to your critter corrall</a></p>

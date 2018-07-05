@@ -1,9 +1,9 @@
 ﻿<!--display critter list-->
 
-<h1>Critter Farm</h1>
+<h1>Critter Corrall!</h1>
 <ul>@foreach (var critter in Model)
     {
-    <li><a href="critter/@critter.GetId()">@critter.GetName()</a></li>
+    <li><a href="critters/@critter.GetId()">@critter.GetName()</a></li>
     }
 </ul>
 <p><a href="/new-critter">Spawn a new critter pal</a></p>

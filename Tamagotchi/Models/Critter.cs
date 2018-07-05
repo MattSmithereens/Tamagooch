@@ -33,9 +33,24 @@ namespace Tamagotchi.Models
             _id = _critterList.Count;
         }
 
-        public int Find()
+        public int GetHunger()
         {
-            
+            return _hunger;
+        }
+
+        public int GetAttention()
+        {
+            return _attention;
+        }
+
+        public int GetRest()
+        {
+            return _rest;
+        }
+
+        public int GetId()
+        {
+            return _id;
         }
 
         public void Feed()
@@ -69,5 +84,13 @@ namespace Tamagotchi.Models
             }
 
         }
+
+        //public static void Die()
+        //{
+        //    foreach (Critter Critter in _critterList)
+        //    {
+        //        if (this._)
+        //    }
+        //}
     }
 }
