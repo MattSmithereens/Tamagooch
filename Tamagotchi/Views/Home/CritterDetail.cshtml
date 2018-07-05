@@ -1,6 +1,11 @@
-﻿@if (@Model.IsDead())
+﻿@{
+  Layout = "_Layout";
+}
+
+
+@if (@Model.IsDead())
 {
-    <h1>@Model.GetName() died!</h1>
+    <h1>You killed @Model.GetName()!!!  You monster!</h1>
     <p><a href="/critters">Go back to your critter corrall</a></p>
 }
 

@@ -1,3 +1,7 @@
-﻿<h1>You rested @Model.GetName()!</h1>
+﻿@{
+  Layout = "_Layout";
+}
+
+<h1>You rested @Model.GetName()!</h1>
 <p><a href="../@Model.GetId()">Go Back to @Model.GetName()</a></p>
-<p><a href="critters">Go back to your critter corrall</a></p>
+<p><a href="../">Go back to your critter corrall</a></p>
