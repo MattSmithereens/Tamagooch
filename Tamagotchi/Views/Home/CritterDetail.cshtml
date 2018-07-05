@@ -1,0 +1,9 @@
+﻿<h1>@Model.GetName()</h1>
+<ul>@foreach (var property in Model)
+    {
+    <li>Rest = @Model.GetRest();</li>
+    <li>Hunger = @Model.GetHunger();</li>
+    <li>Attention = @Model.GetAttention();</li>
+      
+    }
+</ul>
